@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package exemplopratico;
+package aula05;
 
 /**
  *
@@ -10,7 +10,7 @@ package exemplopratico;
  */
 public class ContaBanco {
 
-    private int numConta;
+    public int numConta;
     protected String tipo;
     private String dono;
     private float saldo;
