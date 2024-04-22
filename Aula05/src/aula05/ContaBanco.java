@@ -23,16 +23,16 @@ public class ContaBanco {
     pagarMensal() - CC: 12.00, CP: 20.00 */
     public void abrirConta(String t) {
         t = t.toUpperCase();
-        setStatus(true);
+        this.setStatus(true);
 
         switch (t) {
             case "CC" -> {
-                setTipo(t);
-                setSaldo(50);
+                this.setTipo(t);
+                this.setSaldo(50);
             }
             case "CP" -> {
-                setTipo(t);
-                setSaldo(100);
+                this.setTipo(t);
+                this.setSaldo(150);
             }
             default ->
                 System.out.println("Tipo Inválido");
@@ -41,29 +41,30 @@ public class ContaBanco {
     }
 
     public void fecharConta() {
-        if (this.saldo > 0) {
+        if (this.getSaldo() > 0) {
             System.out.println("A conta possui saldo.");
-        }
-        if (this.saldo < 0) {
+        } else if (this.getSaldo() < 0) {
             System.out.println("A conta está negativada.");
         } else {
+            this.setStatus(false);
             System.out.println("A foi fechada.");
-            setStatus(false);
         }
     }
 
     public void depositar(float valor) {
-        if (this.isStatus() == true) {
-            setSaldo(getSaldo() + valor);
+        if (this.isStatus()) {
+            this.setSaldo(this.getSaldo() + valor);
+            System.out.println("Depósito realizado na conta de: " + this.getDono());
         } else {
             System.out.println("Conta fechada.");
         }
     }
 
     public void sacar(float valor) {
-        if (isStatus() == true) {
-            if (getSaldo() >= valor) {
-                setSaldo(getSaldo() - valor);
+        if (this.isStatus()) {
+            if (this.getSaldo() >= valor) {
+                this.setSaldo(this.getSaldo() - valor);
+                System.out.println("Saque realizado na conta de: " + this.getDono());
             } else {
                 System.out.println("Saldo Insuficiente");
             }
@@ -75,7 +76,7 @@ public class ContaBanco {
     public void pagarMensal() {
         float valor = 0;
 
-        switch (getTipo()) {
+        switch (this.getTipo()) {
             case "CC" -> {
                 valor = 12;
             }
@@ -86,9 +87,10 @@ public class ContaBanco {
                 System.out.println("Tipo Inválido");
         }
 
-        if (isStatus() == true) {
-            if (getSaldo() > valor) {
-                setSaldo(getSaldo() - valor);
+        if (this.isStatus() == true) {
+            if (this.getSaldo() > valor) {
+                this.setSaldo(this.getSaldo() - valor);
+                System.out.println("Mensalidade paga com sucesso por: " + this.getDono());
             } else {
                 System.out.println("Saldo Insuficiente para pagamento mensal");
             }
@@ -98,9 +100,9 @@ public class ContaBanco {
 
     }
 
-    public ContaBanco(int num, String tipo, String dono) {
-        setSaldo(0);
-        setStatus(false);
+    public ContaBanco() {
+        this.setSaldo(0);
+        this.setStatus(false);
     }
 
     public int getNumConta() {
@@ -144,6 +146,7 @@ public class ContaBanco {
     }
 
     public void dados() {
+        System.out.println("------------------------------------");
         System.out.println("Numero: " + this.numConta);
         System.out.println("Tipo: " + this.tipo);
         System.out.println("Dono: " + this.dono);
