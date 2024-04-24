@@ -10,5 +10,14 @@ package aula06;
  */
 public class ControleRemoto {
 
+    private int volume;
+    private boolean ligado;
+    private boolean tocando;
+
+    public ControleRemoto() {
+        this.volume = 50;
+        this.ligado = false;
+        this.tocando = false;
+    }
 
 }
