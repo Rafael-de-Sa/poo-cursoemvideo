@@ -117,7 +117,11 @@ public class Lutador implements ILutador {
 
     @Override
     public void status() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println(this.getNome());
+        System.out.println("É um peso: " + this.getCategoria());
+        System.out.println(this.getVitorias() + " vitórias");
+        System.out.println(this.getDerrotas() + " derrotas");
+        System.out.println(this.getEmpates() + " empates");
     }
 
     @Override
