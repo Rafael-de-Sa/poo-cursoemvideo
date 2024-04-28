@@ -19,10 +19,11 @@ public class Aula07 {
         l[4] = new Lutador("Ufocobol", "Brasil", 1.7f, 119.3f, 37, 5, 4, 3);
         l[5] = new Lutador("Nerdard", "EUA", 1.81f, 105.7f, 30, 12, 2, 4);
 
-        l[0].apresentar();
-        l[2].status();
-        l[3].getCategoria();
-        l[1].ganharLuta();
-        l[0].empatarLuta();
+        Luta UEC01 = new Luta();
+        UEC01.marcarLuta(l[0], l[1]);
+        UEC01.lutar();
+        l[0].status();
+        l[1].status();
+
     }
 }
