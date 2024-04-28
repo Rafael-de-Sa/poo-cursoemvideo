@@ -34,14 +34,14 @@ public class Lutador implements ILutador {
         return categoria;
     }
 
-    public void setCategoria(float peso) {
-        if (peso <= 52.5f) {
+    private void setCategoria() {
+        if (this.peso <= 52.2f) {
             this.categoria = "Inválido";
-        } else if (peso > 52.5f && peso <= 70.3f) {
+        } else if (this.peso <= 70.3f) {
             this.categoria = "Leve";
-        } else if (peso > 70.3f && peso <= 83.9f) {
+        } else if (this.peso <= 83.9f) {
             this.categoria = "Médio";
-        } else if (peso > 83.9f && peso <= 120.2f) {
+        } else if (this.peso <= 120.2f) {
             this.categoria = "Pesado";
         } else {
             this.categoria = "Inválido";
@@ -64,7 +64,7 @@ public class Lutador implements ILutador {
     public void setPeso(float peso) {
         this.peso = peso;
 
-        this.setCategoria(this.getPeso());
+        this.setCategoria();
 
     }
 
