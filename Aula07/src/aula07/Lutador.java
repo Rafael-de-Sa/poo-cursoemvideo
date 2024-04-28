@@ -126,12 +126,12 @@ public class Lutador implements ILutador {
 
     @Override
     public void ganharLuta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.setVitorias(this.getVitorias() + 1);
     }
 
     @Override
     public void perderLuta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.setDerrotas(this.getDerrotas() + 1);
     }
 
     @Override
