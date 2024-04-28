@@ -11,11 +11,11 @@ import java.util.Random;
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
 public class Luta implements ILuta {
-    
+
     private Lutador desafiado, desafiante;
     private int rounds;
     private boolean aprovada;
-    
+
     @Override
     public void marcarLuta(Lutador desafiante, Lutador desafiado) {
         this.setDesafiante(desafiante);
@@ -26,15 +26,15 @@ public class Luta implements ILuta {
         *Só pode ser se for aprovada.
         *Só pode ter como resultado a vitória de um lutador ou empate.
          */
-        if (this.desafiante.getCategoria().equals(this.desafiado.getCategoria()) && this.desafiante != this.desafiado) {
+        if (this.getDesafiante().getCategoria().equals(this.getDesafiado().getCategoria()) && this.getDesafiante() != this.getDesafiado()) {
             this.aprovada = true;
         } else {
             this.aprovada = false;
-            this.desafiante = null;
-            this.desafiado = null;
+            this.setDesafiado(null);
+            this.setDesafiante(null);
         }
     }
-    
+
     @Override
     public void lutar() {
         if (this.isAprovada()) {
@@ -66,42 +66,42 @@ public class Luta implements ILuta {
                 default ->
                     System.out.println("Resultado Inválido");
             }
-            
+
         } else {
             System.out.println("A luta não pode acontecer.");
         }
     }
-    
+
     public Lutador getDesafiado() {
         return desafiado;
     }
-    
+
     public void setDesafiado(Lutador desafiado) {
         this.desafiado = desafiado;
     }
-    
+
     public Lutador getDesafiante() {
         return desafiante;
     }
-    
+
     public void setDesafiante(Lutador desafiante) {
         this.desafiante = desafiante;
     }
-    
+
     public int getRounds() {
         return rounds;
     }
-    
+
     public void setRounds(int rounds) {
         this.rounds = rounds;
     }
-    
+
     public boolean isAprovada() {
         return aprovada;
     }
-    
+
     public void setAprovada(boolean aprovada) {
         this.aprovada = aprovada;
     }
-    
+
 }
