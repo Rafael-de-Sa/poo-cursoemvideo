@@ -4,6 +4,7 @@
  */
 package aula07;
 
+import java.util.Random;
 
 /**
  *
@@ -31,6 +32,41 @@ public class Luta implements ILuta {
             this.desafiado = null;
         }
     }
+
+    @Override
+    public void lutar() {
+        if (this.aprovada) {
+            this.desafiado.apresentar();
+            this.desafiante.apresentar();
+
+            Random random = new Random();
+            int vencedor = random.nextInt(3);
+
+            switch (vencedor) {
+                case 0: //Empate
+                    System.out.println("Empatou");
+                    this.desafiado.empatarLuta();
+                    this.desafiante.empatarLuta();
+                    break;
+                case 1: //Desafiado Ganhou
+                    System.out.println(this.desafiado.getNome());
+                    this.desafiado.ganharLuta();
+                    this.desafiante.perderLuta();
+                    break;
+                case 2: //Desafiante Ganhou
+                    System.out.println(this.desafiante.getNome());
+                    this.desafiante.ganharLuta();
+                    this.desafiado.perderLuta();
+                    break;
+                default:
+                    System.out.println("Resultado Inválido");
+            }
+
+        } else {
+            System.out.println("A luta não pode acontecer.");
+        }
+    }
+
     public Lutador getDesafiado() {
         return desafiado;
     }
