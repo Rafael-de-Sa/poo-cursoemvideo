@@ -38,34 +38,38 @@ public class Luta implements ILuta {
     @Override
     public void lutar() {
         if (this.isAprovada()) {
-            this.desafiado.apresentar();
-            this.desafiante.apresentar();
+            System.out.println("### DESAFIADO ###");
+            this.getDesafiado().apresentar();
+            System.out.println("### DESAFIANTE ###");
+            this.getDesafiante().apresentar();
 
             Random random = new Random();
             int vencedor = random.nextInt(3);
 
+            System.out.println("======= RESULTADO DA LUTA =======");
             switch (vencedor) {
                 case 0 -> {
                     //Empate
                     System.out.println("Empatou");
-                    this.desafiado.empatarLuta();
-                    this.desafiante.empatarLuta();
+                    this.getDesafiado().empatarLuta();
+                    this.getDesafiante().empatarLuta();
                 }
                 case 1 -> {
                     //Desafiado Ganhou
                     System.out.println(this.desafiado.getNome());
-                    this.desafiado.ganharLuta();
-                    this.desafiante.perderLuta();
+                    this.getDesafiado().ganharLuta();
+                    this.getDesafiante().perderLuta();
                 }
                 case 2 -> {
                     //Desafiante Ganhou
                     System.out.println(this.desafiante.getNome());
-                    this.desafiante.ganharLuta();
-                    this.desafiado.perderLuta();
+                    this.getDesafiante().ganharLuta();
+                    this.getDesafiado().perderLuta();
                 }
                 default ->
                     System.out.println("Resultado Inválido");
             }
+            System.out.println("===================================");
 
         } else {
             System.out.println("A luta não pode acontecer.");
