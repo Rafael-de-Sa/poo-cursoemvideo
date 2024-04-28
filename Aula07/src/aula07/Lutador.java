@@ -108,7 +108,18 @@ public class Lutador implements ILutador {
 
     @Override
     public void empatarLuta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.setEmpates(this.getEmpates() + 1);
+    }
+
+    public Lutador(String nome, String nacionalidade, float altura, float peso, int idade, int vitorias, int derrotas, int empates) {
+        this.setNome(nome);
+        this.setNacionalidade(nacionalidade);
+        this.setAltura(altura);
+        this.setPeso(peso);
+        this.setIdade(idade);
+        this.setVitorias(vitorias);
+        this.setDerrotas(derrotas);
+        this.setEmpates(empates);
     }
 
 }
