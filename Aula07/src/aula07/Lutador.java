@@ -105,7 +105,14 @@ public class Lutador implements ILutador {
 
     @Override
     public void apresentar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Lutador: " + this.getNome());
+        System.out.println("Origem: " + this.getNacionalidade());
+        System.out.println(this.getIdade() + " Anos");
+        System.out.println(this.getAltura() + "m de altura");
+        System.out.println("Pesando: " + this.getPeso());
+        System.out.println("Ganhou: " + this.getVitorias());
+        System.out.println("Perdeu: " + this.getDerrotas());
+        System.out.println("Empatou: " + this.getEmpates());
     }
 
     @Override
