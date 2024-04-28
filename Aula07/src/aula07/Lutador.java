@@ -52,6 +52,9 @@ public class Lutador implements ILutador {
 
     public void setPeso(float peso) {
         this.peso = peso;
+
+        this.setCategoria(this.getPeso());
+
     }
 
     public int getIdade() {
