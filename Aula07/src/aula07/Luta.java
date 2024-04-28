@@ -15,6 +15,22 @@ public class Luta implements ILuta {
     private int rounds;
     private boolean aprovada;
 
+    @Override
+    public void marcarLuta(Lutador desafiante, Lutador desafiado) {
+        /*Pode ser marcada somente por lutadores da mesma categoria.
+        *O desafiado e desafiante devem ser jogadores diferentes.
+        *Só pode ser se for aprovada.
+        *Só pode ter como resultado a vitória de um lutador ou empate.
+         */
+
+        if (this.desafiante.getCategoria().equals(this.desafiado.getCategoria()) && this.desafiante != this.desafiado) {
+            this.aprovada = true;
+        } else {
+            this.aprovada = false;
+            this.desafiante = null;
+            this.desafiado = null;
+        }
+    }
     public Lutador getDesafiado() {
         return desafiado;
     }
