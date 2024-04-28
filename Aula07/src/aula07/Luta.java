@@ -10,4 +10,9 @@ package aula07;
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
 public class Luta implements ILuta {
+
+    private Lutador desafiado, desafiante;
+    private int rounds;
+    private boolean aprovada;
+
 }
