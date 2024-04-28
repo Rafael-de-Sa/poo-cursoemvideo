@@ -35,16 +35,13 @@ public class Lutador implements ILutador {
     }
 
     public void setCategoria(float peso) {
-        if (peso <= 52.5) {
+        if (peso <= 52.5f) {
             this.categoria = "Inválido";
-        }
-        if (peso > 52.5 && peso <= 70.3) {
+        } else if (peso > 52.5f && peso <= 70.3f) {
             this.categoria = "Leve";
-        }
-        if (peso > 70.3 && peso <= 83.9) {
+        } else if (peso > 70.3f && peso <= 83.9f) {
             this.categoria = "Médio";
-        }
-        if (peso > 83.9 && peso <= 120.2) {
+        } else if (peso > 83.9f && peso <= 120.2f) {
             this.categoria = "Pesado";
         } else {
             this.categoria = "Inválido";
