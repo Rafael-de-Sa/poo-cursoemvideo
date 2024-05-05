@@ -17,4 +17,10 @@ public class Livro {
     private boolean aberto;
     private Pessoa leitor;
 
+    public String detalhes() {
+        return "Livro{" + "titulo=" + titulo + ", autor=" + autor
+                + ", totPaginas=" + totPaginas + ", pagAtual=" + pagAtual
+                + ", aberto=" + aberto + ", leitor=" + leitor + '}';
+    }
+
 }
