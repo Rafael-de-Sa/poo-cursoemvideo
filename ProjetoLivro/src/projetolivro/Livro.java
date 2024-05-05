@@ -18,9 +18,11 @@ public class Livro implements Publicacao {
     private Pessoa leitor;
 
     public String detalhes() {
-        return "Livro{" + "titulo=" + titulo + ", autor=" + autor
-                + ", totPaginas=" + totPaginas + ", pagAtual=" + pagAtual
-                + ", aberto=" + aberto + ", leitor=" + leitor + '}';
+        return "Livro{" + "titulo=" + titulo + "\nautor=" + autor
+                + "\ntotPaginas=" + totPaginas + "\npagAtual=" + pagAtual
+                + "\naberto=" + aberto + "\nleitor=" + leitor.getNome()
+                + "\nidade=" + leitor.getIdade()
+                + "\nsexo=" + leitor.getSexo() + '}';
     }
 
     public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
