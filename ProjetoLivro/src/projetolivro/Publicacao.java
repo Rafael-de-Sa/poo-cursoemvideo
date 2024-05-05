@@ -9,4 +9,15 @@ package projetolivro;
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
 public interface Publicacao {
+
+    public void abrir();
+
+    public void fechar();
+
+    public void folhear();
+
+    public void avancarPag();
+
+    public void voltarPag();
+
 }
