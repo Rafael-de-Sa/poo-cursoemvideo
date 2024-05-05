@@ -23,4 +23,11 @@ public class Livro {
                 + ", aberto=" + aberto + ", leitor=" + leitor + '}';
     }
 
+    public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.totPaginas = totPaginas;
+        this.leitor = leitor;
+    }
+
 }
