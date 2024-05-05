@@ -8,7 +8,7 @@ package projetolivro;
  *
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
-public class Livro {
+public class Livro implements Publicacao {
 
     private String titulo;
     private String autor;
