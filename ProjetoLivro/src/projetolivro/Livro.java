@@ -9,4 +9,12 @@ package projetolivro;
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
 public class Livro {
+
+    private String titulo;
+    private String autor;
+    private int totPaginas;
+    private int pagAtual;
+    private boolean aberto;
+    private Pessoa leitor;
+
 }
