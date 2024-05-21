@@ -9,4 +9,8 @@ package aula10;
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
 public class Professor extends Pessoa {
+
+    private String especialidade;
+    private float salario;
+
 }
