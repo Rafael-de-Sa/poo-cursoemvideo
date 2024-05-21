@@ -13,6 +13,9 @@ public class Aluno extends Pessoa {
     private int matr;
     private String curso;
 
+    public void cancelarMatr() {
+
+    }
 
     public int getMatr() {
         return matr;
