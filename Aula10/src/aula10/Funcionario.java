@@ -10,4 +10,6 @@ package aula10;
  */
 public class Funcionario extends Pessoa {
 
+    private String setor;
+    private boolean trabalhando;
 }
