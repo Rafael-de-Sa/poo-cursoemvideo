@@ -14,6 +14,10 @@ public class Pessoa {
     private int idade;
     private String sexo;
     
+    public void fazerAniv() {
+        this.setIdade(this.getIdade() + 1);
+    }
+    
     public String getNome() {
         return nome;
     }
