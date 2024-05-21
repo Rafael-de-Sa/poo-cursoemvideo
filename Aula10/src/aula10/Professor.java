@@ -13,6 +13,10 @@ public class Professor extends Pessoa {
     private String especialidade;
     private float salario;
 
+    public void ReceberAum() {
+
+    }
+
     public String getEspecialidade() {
         return especialidade;
     }
