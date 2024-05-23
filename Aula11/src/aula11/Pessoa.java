@@ -13,6 +13,10 @@ public abstract class Pessoa {
     private String nome, sexo;
     private int idade;
 
+    public void fazerAniv() {
+        this.setIdade(this.getIdade() + 1);
+    }
+
     public String getNome() {
         return nome;
     }
