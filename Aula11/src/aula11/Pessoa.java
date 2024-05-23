@@ -10,5 +10,8 @@ package aula11;
  */
 public abstract class Pessoa {
 
+    private String nome, sexo;
+    private int idade;
+
 
 }
