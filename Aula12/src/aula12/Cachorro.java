@@ -8,7 +8,7 @@ package aula12;
  *
  * @author Rafael de Sá <rafaeldesa170622@gmail.com>
  */
-public class Cachorro extends Mamifero {
+public class Cachorro extends Lobo {
 
     public void enterrarOsso() {
         System.out.println("Enterrando Osso");
