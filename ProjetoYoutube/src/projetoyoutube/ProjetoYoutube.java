@@ -25,6 +25,9 @@ public class ProjetoYoutube {
 
         System.out.println(v[1].toString());
         System.out.println(g[0].toString());
+
+        Visualizacao vis = new Visualizacao(g[0], v[1]);
+        System.out.println(vis.toString());
     }
 
 }
