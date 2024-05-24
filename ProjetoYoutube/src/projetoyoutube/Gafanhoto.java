@@ -40,4 +40,8 @@ public class Gafanhoto extends Pessoa {
         return "Gafanhoto{" + super.toString() + "login=" + login + ", totAssistido=" + totAssistido + '}';
     }
 
+    public void viuMaisUm() {
+        this.totAssistido++;
+    }
+
 }
