@@ -19,6 +19,9 @@ public class ProjetoYoutube {
 
         System.out.println(v[0].toString());
 
+        Gafanhoto g[] = new Gafanhoto[2];
+        g[0] = new Gafanhoto("Jubileu", "M", 22, "juba");
+
     }
 
 }
