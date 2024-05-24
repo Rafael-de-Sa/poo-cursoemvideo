@@ -23,11 +23,16 @@ public class ProjetoYoutube {
         g[0] = new Gafanhoto("Jubileu", "M", 22, "juba");
         g[1] = new Gafanhoto("Creuza", "F", 12, "creuzita");
 
-        System.out.println(v[1].toString());
-        System.out.println(g[0].toString());
+        Visualizacao vis[] = new Visualizacao[5];
+        vis[0] = new Visualizacao(g[0], v[2]);
+        vis[1] = new Visualizacao(g[0], v[1]);
+        vis[2] = new Visualizacao(g[0], v[2]);
+        vis[3] = new Visualizacao(g[1], v[0]);
+        vis[3].avaliar(87f);
+        vis[4] = new Visualizacao(g[1], v[0]);
 
-        Visualizacao vis = new Visualizacao(g[0], v[1]);
-        System.out.println(vis.toString());
+        System.out.println(v[0].getAvaliacao());//1
+        System.out.println(v[0].toString());
     }
 
 }
